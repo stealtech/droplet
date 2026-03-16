@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "bun run index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "discord.js": "^14.25.1",
+    "discord.js-selfbot-v13": "file:./selfbot-v13",
+    "terminal-image": "^4.2.0",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.10"
+  },
+  "name": "self-botting",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

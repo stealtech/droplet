@@ -1,0 +1,87 @@
+selfbot:
+  token: "YOUR_USER_TOKEN"
+  commandPrefix: "-"
+  logLevel: "info" # debug | info | warn | error
+  deleteCommandMessage: true
+
+accountSpoof:
+  enabled: true
+  platform: "vr" # desktop | web | android | ios | xbox | playstation | vr
+  # Optional override for advanced users. If set, this value is used directly.
+  customBrowser: ""
+
+presence:
+  enabled: false
+  status: "online" # online | idle | dnd | invisible
+  activityType: "WATCHING" # PLAYING | STREAMING | LISTENING | WATCHING | COMPETING
+  activityText: "Slash workflows"
+
+features:
+  prefixCommands: false
+  help: true
+  ping: true
+  userInfo: true
+  slash: true
+  preset: true
+  admin: true
+
+appBot:
+  enabled: true
+  token: "YOUR_APP_BOT_TOKEN"
+  clientId: "YOUR_APPLICATION_CLIENT_ID"
+  guildId: "" # Optional
+  registerCommandsOnStartup: true
+  allowedUserIds: ["YOUR_USER_ID"]
+
+safety:
+  runCommandsFromSelfOnly: true
+  ignoreBots: true
+  allowInDM: true
+  allowedChannelIds: []
+  blockedChannelIds: []
+
+slash:
+  defaultDeferredTimeoutMs: 120000
+  parseBooleans: true
+  parseNumbers: true
+  parseNullAsUndefined: true
+  argumentSeparator: "|"
+  presets:
+    - name: "owo-balance"
+      channelId: "YOUR_CHANNEL_ID"
+      botId: "YOUR_TARGET_BOT_ID"
+      command: "balance"
+      args: []
+    - name: "poketwo-ping"
+      channelId: "YOUR_CHANNEL_ID"
+      botId: "YOUR_TARGET_BOT_ID"
+      command: "ping"
+      args: []
+
+startup:
+  runPresetsOnReady: []
+  syncApplicationEmojisOnStartup: true
+  applicationEmojiDirectory: "./assets/"
+  questCompletor:
+    enabled: true
+    checkIntervalMs: 120000
+    autoEnroll: true
+    videoProgressStepSeconds: 15
+
+embed:
+  color: "#5865F2"
+  successColor: "#57F287"
+  warningColor: "#FEE75C"
+  errorColor: "#ED4245"
+  footerText: "droplet, as fluid as it gets."
+  timestamp: true
+  includeRequesterTag: true
+  showAvatarInUserInfo: true
+
+limits:
+  maxEmbedDescriptionLength: 2048
+  maxCommandArguments: 24
+
+formatting:
+  dateLocale: "en-US"
+  useRelativeTime: true
